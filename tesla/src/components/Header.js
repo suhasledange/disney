@@ -14,7 +14,7 @@ function Header() {
   return (
     <Container>
         <Logo>
-            <img src="/images/logo.svg" alt=""></img>
+            <img src="https://suhasledange.github.io/tesla/images/logo.svg" alt=""></img>
         </Logo>
 
         <Menu>
@@ -30,8 +30,10 @@ function Header() {
         </Menu>
 
         <RightMenu>
+            <RightM>
             <a id ="icn" href="#">Shop</a>
             <a id = "icn" href="#">Account</a>
+            </RightM>
             <CustomMenu id="icn" onClick={()=> setBurgerStatus(true)}>Menu</CustomMenu>
         </RightMenu>
             
@@ -88,7 +90,9 @@ const Menu = styled.div`
         padding: 10px 15px;
         flex-wrap: nowrap;
     }
-
+    @media(max-width:1200px){
+        display: none;
+    }
     @media(max-width:768px){
         display: none;
     }
@@ -100,6 +104,13 @@ const RightMenu = styled.div`
     a{
         font-weight: 600;
         padding: 10px 10px;
+    }
+
+`
+const RightM = styled.div`
+
+    @media (max-width:768px) {
+         display: none;
     }
 
 `

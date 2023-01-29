@@ -25,7 +25,7 @@ function Section({title,description,backimg,leftbtnText,rightbtnText}) {
         }
     </ButtonGroup>
     </Fade>
-    <DownArrow src="/images/down-arrow.svg"/>
+    <DownArrow src="https://suhasledange.github.io/tesla/images/down-arrow.svg"/>
     </Buttons>
 
     </Wrap>
@@ -44,7 +44,7 @@ const Wrap = styled.div`
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    background-image : ${props => `url("/images/${props.bgimg}")`};
+    background-image : ${props => `url("https://suhasledange.github.io/tesla/images/${props.bgimg}")`};
 `
 
 const ItemText = styled.div`
