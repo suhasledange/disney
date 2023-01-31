@@ -21,12 +21,19 @@ function ImgSlider() {
 
   return (
     <Carousel {...settings}>
-     
+      
+     <Wrap>
+            <img src="/images/slider-scale.jpg" />
+      </Wrap>
       <Wrap>
             <img src="/images/slider-badging.jpg" />
       </Wrap>
       <Wrap>
             <img src="/images/slider-badag.jpg" />
+      </Wrap>
+      
+      <Wrap>
+            <img src="/images/slider-scales.jpg" />
       </Wrap>
 
     </Carousel>
@@ -36,8 +43,8 @@ function ImgSlider() {
 export default ImgSlider
 
 const Carousel = styled(Slider)`
-      margin-top: 20px;
 
+      margin-top: 6rem;
   ul li button{
     /* display: none; */
     &:before{
@@ -45,7 +52,11 @@ const Carousel = styled(Slider)`
       color: rgb(150,158,171);
     }
   }
-
+  &:hover{
+    button{
+        opacity : 1;
+      }
+  }
     li.slick-active button:before{
         color: white;
       }
@@ -53,22 +64,35 @@ const Carousel = styled(Slider)`
         overflow: visible;
       }
     button{
-        z-index: -1;
+        z-index: 1;
+        opacity :0;
+        transition: 250ms;
       }
 `
 const Wrap = styled.div`
   cursor: pointer;
+  
   img{
     border: 4px solid transparent;
     border-radius: 4px;
     width: 100%;
     height: 100%;
+
+    @media (max-width:1200px) {
+      height :25rem ;
+    }
+    @media (max-width:768px) {
+      height :20rem ;
+    }
+
     box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px, rgb(0 0 0 / 73%) 0px 16px 10px -10px;
     transition: 300ms;
     
     &:hover{
       border-color: rgba(249,249,249,0.8);
+      
     }
+
   
   }
 
